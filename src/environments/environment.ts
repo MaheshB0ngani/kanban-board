@@ -5,15 +5,15 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAo-f70V-bESdDU-jTf4An9aYf90U_lBco',
-    authDomain: 'finance-manager-a3d36.firebaseapp.com',
-    databaseURL: 'https://finance-manager-a3d36.firebaseio.com',
-    projectId: 'finance-manager-a3d36',
-    storageBucket: 'finance-manager-a3d36.appspot.com',
-    messagingSenderId: '839318379008',
-    appId: '1:839318379008:web:2cf69f26b995c707fe16e5',
-    measurementId: 'G-LH9VL0P1B3'
-  }
+    apiKey: 'AIzaSyAaF7w35uGWJ_UMaorDKn3VLOya6rXiIb4',
+    authDomain: 'geeky-kanban-board.firebaseapp.com',
+    databaseURL: 'https://geeky-kanban-board.firebaseio.com',
+    projectId: 'geeky-kanban-board',
+    storageBucket: 'geeky-kanban-board.appspot.com',
+    messagingSenderId: '479871952914',
+    appId: '1:479871952914:web:6fd0d339058ca4d91f90cb',
+    measurementId: 'G-N53V1Q7JV5',
+  },
 };
 
 /*

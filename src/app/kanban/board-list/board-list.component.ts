@@ -14,7 +14,7 @@ import { BoardService } from '../board.service';
 
 export class BoardListComponent implements OnInit, OnDestroy {
 
-  boards: Board[];
+  boards: Board[] = [];
   sub: Subscription;
 
   constructor(private boardService: BoardService, public dialog: MatDialog) { }

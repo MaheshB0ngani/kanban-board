@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyBs5P59i0-oIFns6DUAip7aslrphJOjfvc",
-    authDomain: "kanbanboard-dev-ebdf6.firebaseapp.com",
-    databaseURL: "https://kanbanboard-dev-ebdf6.firebaseio.com",
-    projectId: "kanbanboard-dev-ebdf6",
-    storageBucket: "kanbanboard-dev-ebdf6.appspot.com",
-    messagingSenderId: "61848310186",
-    appId: "1:61848310186:web:a5a5338b664f08b50fdbd3",
-    measurementId: "G-CWH4R3DP8H"
+    apiKey: 'AIzaSyAo-f70V-bESdDU-jTf4An9aYf90U_lBco',
+    authDomain: 'finance-manager-a3d36.firebaseapp.com',
+    databaseURL: 'https://finance-manager-a3d36.firebaseio.com',
+    projectId: 'finance-manager-a3d36',
+    storageBucket: 'finance-manager-a3d36.appspot.com',
+    messagingSenderId: '839318379008',
+    appId: '1:839318379008:web:2cf69f26b995c707fe16e5',
+    measurementId: 'G-LH9VL0P1B3'
   }
 };
