@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-content>
+        <h1>Create Account</h1>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <mat-error *ngIf="errorMessage">
+                {{errorMessage}}
+            </mat-error>
+
+            <mat-error
+                *ngIf="form.get('passData').errors?.passwordMatch && form.get('passData.rePassword').touched && form.get('passData.rePassword').dirty">
+                Passwords don't match!
+            </mat-error>
+
+            <mat-form-field>
+                <mat-label>
+                    Email address
+                </mat-label>
+                <input matInput type="text" name="email" placeholder="example@domain.com" formControlName="email">
+                <mat-error>
+                    Please provide a valid email address.
+                </mat-error>
+            </mat-form-field>
+
+            <div formGroupName="passData">
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" name="password" formControlName="password">
+                    <mat-error>
+                        Password must be at least 8 symbols.
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Confirm password</mat-label>
+                    <input matInput type="password" name="rePassword" formControlName="rePassword">
+                    <mat-error>
+                        Password must be at least 8 symbols.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <button ngClass="auth_button" mat-raised-button>Submit</button>
+        </form>
+    </mat-card-content>
+    <h3>Already Registered? <a mat-button ngClass="auth_link" routerLink="/user/auth/login"
+            routerLinkActive="active">Login</a></h3>
+</mat-card>

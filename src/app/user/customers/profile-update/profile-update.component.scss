@@ -1,0 +1,27 @@
+mat-card.reset_card {
+    margin: 1em auto;
+    min-width: 320px;
+    max-width: 420px;
+
+    .reset_error {
+        margin: 16px;
+    }
+
+    .reset_button {
+        margin: 14px;
+        padding: 3px 86px;
+        font-size: 17px;
+    }
+
+    mat-form-field {
+        display: block;        
+        margin-bottom: 4px;
+        padding: 15px;
+    }
+
+    mat-icon {
+        font-size: 18px;
+        margin-left: 5px;
+    } 
+}
+  

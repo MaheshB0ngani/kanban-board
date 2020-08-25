@@ -1,0 +1,66 @@
+@mixin desktop {
+  @media (min-width:#{960px}) {
+      @content;
+  }    
+}
+
+@mixin tablet {
+  @media (min-width:#{600px}) {
+      @content;
+  }    
+}
+
+img {
+ width: 1.25em;
+}
+
+mat-card {
+  margin: 2em auto;
+  text-align: center;
+  min-width: 80%;
+  max-width: 80%;
+
+  @include tablet {
+    min-width: 68%;
+    max-width: 68%;
+  }
+
+  @include desktop {
+    min-width: 520px;
+    max-width: 520px;
+  }
+
+  h1 {
+    margin: 22px 5px;
+  }
+
+  .auth_error {
+    margin: 16px;
+  }
+
+  .auth_button {
+      margin: 14px;
+      padding: 3px 86px;
+      font-size: 17px;
+   }
+
+   a {
+    text-decoration: none;
+  }
+
+  p {
+    text-align: end;
+    margin-right: 26px;
+  }
+}
+
+mat-form-field {
+  display: block;
+  padding: 0 26px;
+  margin-bottom: 4px;
+}
+
+mat-icon {
+  font-size: 18px;
+  margin-left: 5px;
+} 

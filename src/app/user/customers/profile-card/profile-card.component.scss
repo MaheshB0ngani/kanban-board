@@ -1,0 +1,16 @@
+mat-card.profile_card {
+  margin: 1em auto;
+  max-width: 320px;
+
+  mat-card-header {
+    margin-bottom: 5px;
+  }
+
+  .profile_image {
+    width: 100%;
+  }
+
+  .avatar {
+    object-fit: cover;
+  }
+} 

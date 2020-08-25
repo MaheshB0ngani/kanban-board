@@ -1,0 +1,64 @@
+.outer-card {
+    background: #212121; 
+    min-width: 95%;
+    max-width: 95%;
+    min-height: 22em;
+    margin: 1em auto;
+    padding: 15px;   
+     
+    mat-card-header {
+        text-transform: uppercase;        
+        justify-content:space-between;
+    }
+}
+
+.outer-card.active {
+    visibility: hidden;
+    opacity: 0;   
+
+    transition: opacity 1s ease-out;
+    visibility: visible;
+    opacity: 1;
+}
+  
+.inner-card {
+    margin: 5px 0;
+    cursor: pointer;
+    text-align: left;   
+}
+
+.center-card mat-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.cdk-drag-animating {
+    transition: transform 300ms ease;
+}
+  
+.tasks.cdk-drop-list-dragging .cdk-drag {
+    transition: transform 300ms ease;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0.5;
+}
+
+.board-card-footer {
+    position: absolute;  
+    bottom: 0em;
+    padding-bottom: 5px;
+
+    button:not(first-child) {
+        margin-left: 8px;
+    }
+}
+
+.blue { background: #71deff; color: black; }
+.green { background: #36e9b6; color: black;  }
+.yellow { background: #ffcf44; color: black; }
+.purple { background: #b15cff; }
+.red { background: #e74a4a; }
+.gray { background: gray; text-decoration: line-through; }

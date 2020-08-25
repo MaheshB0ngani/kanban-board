@@ -1,0 +1,39 @@
+@mixin desktop {
+  @media (min-width:#{960px}) {
+      @content;
+  }    
+}
+
+@mixin tablet {
+  @media (min-width:#{600px}) {
+      @content;
+  }    
+}
+
+.profile {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100%;  
+  
+  @include tablet {
+    display: grid;
+    grid-template-columns: 36% 64%;
+    padding: 0 80px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 36% 64%;
+    padding: 0 120px;
+  }
+
+  .profile_card {
+    margin: 0 auto;
+  }
+
+  .profile_options {
+    margin: 0 auto;
+  }
+} 
+
+  

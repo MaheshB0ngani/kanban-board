@@ -1,0 +1,13 @@
+<mat-card ngClass="profile_card">
+    <mat-card-header>
+        <mat-card-title>{{userService.currentUser.displayName}}</mat-card-title>
+        <mat-card-subtitle>{{userService.currentUser.email}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <div ngClass="profile_image" routerLink="/user/auth/register">
+        <img mat-card-image ngClass="profile_avatar"
+            [src]="userService.currentUser.photoURL || 'assets/default-user.png'" />
+    </div>
+
+    <app-image-upload></app-image-upload>
+</mat-card>

@@ -1,0 +1,62 @@
+@mixin desktop {
+    @media (min-width:#{960px}) {
+        @content;
+    }    
+}
+
+@mixin tablet {
+    @media (min-width:#{600px}) {
+        @content;
+    }    
+}
+
+.boards {
+    width: 100%;
+    min-height: 22em;
+    .handle {
+        cursor: move;
+        visibility: hidden;
+    }
+    
+    @include tablet {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        .handle {
+            visibility: visible;
+        }
+    }
+
+    @include desktop {
+        display: grid;
+        padding: 0px calc((100% - 1140px) / 2);
+        grid-template-columns: 285px 285px 285px 285px;
+        .handle {
+            visibility: visible;
+        }
+    }
+}  
+  
+.cdk-drag-placeholder {
+    opacity: 0.2;
+    border: 5px dashed gray;
+}
+  
+.cdk-drag-animating {
+    transition: transform 300ms ease;
+}
+  
+.boards.cdk-drop-list-dragging .cdk-drag {
+    transition: transform 300ms ease;
+}
+  
+.button-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px gray dashed;
+    min-width: calc(95% - 5px);
+    max-width: calc(95% - 5px);
+    height: calc(22em - 5px);
+    margin: 1em auto;
+    padding: 15px; 
+}

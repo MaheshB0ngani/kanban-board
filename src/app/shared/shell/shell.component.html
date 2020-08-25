@@ -1,0 +1,92 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <!-- SIDENAV -->
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+
+      <div *ngIf="!userService.isLogged">
+        <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
+        <a mat-list-item routerLink="/user/auth/login" (click)="drawer.close()">Login</a>
+        <a mat-list-item routerLink="/user/auth/register" (click)="drawer.close()">Register</a>
+      </div>
+
+      <div *ngIf="userService.isLogged">
+        <a mat-list-item routerLink="/user/profile" (click)="drawer.close()">Profile</a>
+        <a mat-list-item routerLink="/kanban" (click)="drawer.close()">Kanban</a>
+        <a mat-list-item routerLink="/ssr" (click)="drawer.close()">SSR Demo</a>
+        <a mat-list-item (click)="logout()">Logout</a>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <!-- TOP TOOLBAR-->
+
+    <mat-toolbar>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <span class="logo" routerLink="/">🔥 Angular kanbanboard</span>
+
+      <span class="fill-space"></span>
+
+      <div *ngIf="!(isHandset$ | async)">
+
+        <div *ngIf="userService.currentUser as user">
+
+          <a ngClass="nav-item" mat-button routerLink="/kanban">
+            <mat-icon color="primary">list</mat-icon>
+            <span>Kanban</span>
+          </a>
+          <a ngClass="nav-item" mat-button routerLink="/ssr">
+            <mat-icon color="primary">archive</mat-icon>
+            <span>SSR demo</span>
+          </a>
+          <a ngClass="nav-item" mat-button [matMenuTriggerFor]="menu">
+            <img *ngIf="user.photoURL" class="avatar" [src]="user.photoURL" />
+            <mat-icon *ngIf="!user.photoURL" color="primary">person</mat-icon>
+            <span>{{user.email}}</span>
+          </a>
+        </div>
+
+        <div *ngIf="!userService.isLogged">
+          <a ngClass="nav-item" mat-button routerLink="/user/auth/login">
+            <mat-icon color="primary">login</mat-icon>
+            <span>Login</span>
+          </a>
+          <a ngClass="nav-item" mat-button routerLink="/user/auth/register">
+            <mat-icon color="primary">account_box</mat-icon>
+            <span>Register</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- DROPDOWN MENU -->
+
+      <mat-menu ngClass="dropdown" #menu="matMenu" xPosition="after">
+
+        <button mat-menu-item ngClass="dropdown-link" routerLink="/user/profile">
+          <mat-icon color="primary">person</mat-icon>
+          <span>View Profile</span>
+        </button>
+        <button mat-menu-item ngClass="dropdown-link" (click)="logout()">
+          <mat-icon color="primary">logout</mat-icon>
+          <span>Logout</span>
+        </button>
+
+      </mat-menu>
+    </mat-toolbar>
+
+    <!-- TRANSCLUSION -->
+    <main>
+      <ng-content></ng-content>
+    </main>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

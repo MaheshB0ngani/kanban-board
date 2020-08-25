@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "geeky-kanban-board": {
+      "hosting": {
+        "geeky-kanban-board": [
+          "geeky-kanban-board-dev"
+        ]
+      }
+    }
+  }
+}

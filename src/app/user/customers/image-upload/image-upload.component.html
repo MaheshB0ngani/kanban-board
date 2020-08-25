@@ -1,0 +1,17 @@
+<div ngClass="image_upload">
+        <mat-error ngClass="image_error" *ngIf="errorMessage">
+            {{errorMessage}}
+        </mat-error>
+
+        <mat-form-field>
+            <mat-label>Filename</mat-label>
+            <input matInput type="text" [value]="imageFilename" disabled="true">
+        </mat-form-field>
+
+        <input type="file" id="file" ngClass="input-file" (change)="setImage($event)" />
+        <label for="file">
+            <mat-icon inline="true" color="primary">unarchive</mat-icon>Choose an image...
+        </label>
+
+        <button ngClass="image_button" mat-raised-button [disabled]="loading" (click)="submitHandler()">Upload</button>
+</div>

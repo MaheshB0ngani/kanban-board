@@ -1,0 +1,25 @@
+<mat-card class="reset_card">
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <mat-error ngClass="reset_error" *ngIf="errorMessage">
+                {{errorMessage}}
+            </mat-error>
+
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput type="text" name="displayName" placeholder="John Doe" formControlName="displayName">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Image URL</mat-label>
+                <input matInput type="text" name="photoURL" placeholder="http://" formControlName="photoURL">
+                <mat-error>
+                    Please enter a valid URL.
+                </mat-error>
+            </mat-form-field>
+
+            <button ngClass="reset_button" mat-raised-button [disabled]="loading">Save</button>
+        </form>
+    </mat-card-content>
+</mat-card>
