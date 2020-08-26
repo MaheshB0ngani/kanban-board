@@ -50,3 +50,6 @@ export const environment = {
 
 5.  Run `ng serve`
 "# kanban-board" 
+
+6. See it in action. Live demo
+https://geeky-kanban-board.web.app/
