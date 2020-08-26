@@ -1,7 +1,7 @@
 # KanbanBoard
-![GitHub repo size](https://img.shields.io/github/repo-size/MaheshB0ngani/KanbanBoard)
-![GitHub stars](https://img.shields.io/github/stars/MaheshB0ngani/KanbanBoard?style=social)
-![GitHub forks](https://img.shields.io/github/forks/MaheshB0ngani/KanbanBoard?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/MaheshB0ngani/kanban-board)
+![GitHub stars](https://img.shields.io/github/stars/MaheshB0ngani/kanban-board?style=social)
+![GitHub forks](https://img.shields.io/github/forks/MaheshB0ngani/kanban-board?style=social)
 
 ## Description
 kanbanboard is an Angular PWA powered by Firebase. The application is about where logged users can create their own boards with tasks, only owned boards are showed and can be modified/ removed. User can drag n drop to set the order of the tasks and boards. Guests can preview server side rendered html and data. This application is inspired from Trello.  
@@ -20,8 +20,8 @@ kanbanboard is an Angular PWA powered by Firebase. The application is about wher
 ## Usage
 1.  Run
 
-- `git clone https://github.com/MaheshB0ngani/kanbanboard.git kanbanboard`
-- `cd kanbanboard`
+- `git clone https://github.com/MaheshB0ngani/kanban-board.git kanbanboard`
+- `cd kanban-board`
 - `npm install`
 
 2.  Create a project at https://firebase.google.com/ and grab your web config:
